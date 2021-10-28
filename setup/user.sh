@@ -3,10 +3,12 @@ echo -e "\nINSTALLING AUR SOFTWARE\n"
 
 #git clone "https://github.com/DanielTolentino/.dotfiles"
 chsh -s /usr/bin/fish
+sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 ln -s "$HOME/.dotfiles/fish" $HOME/.config/
 ln -s "$HOME/.dotfiles/kitty" $HOME/.config/
+rm -r "$HOME/.doom.d"
 ln -s "$HOME/.dotfiles/.doom.d" $HOME/
-
+doom sync
 
 PKGS=(
 'authy-desktop-win32-bin'
@@ -37,5 +39,8 @@ PKGS=(
 for PKG in "${PKGS[@]}"; do
     yay -S --noconfirm $PKG
 done
+
+gsettings reset org.gnome.shell app-picker-layout 
+
 echo -e "\nDone!\n"
 exit
