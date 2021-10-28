@@ -115,7 +115,7 @@ alias lt='exa -aT --color=always --group-directories-first' # tree listing
 alias l.='exa -a | egrep "^\."'
 
 # pacman and yay
-alias pacs='pacman -S'				 #install standard pkgs
+alias pacs='sudo pacman -S'				 #install standard pkgs
 alias pacsyu='sudo pacman -Syyu' 		 # update only standard pkgs
 alias yays='yay -S'                		 #install AUR pkgs
 alias yaysua='yay -Sua --noconfirm'              # update only AUR pkgs (yay)
