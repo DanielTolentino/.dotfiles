@@ -1,7 +1,7 @@
 echo -e "\nINSTALLING AUR SOFTWARE\n"
 # You can solve users running this script as root with this and then doing the same for the next for statement. However I will leave this up to you.
 
-git clone "https://github.com/DanielTolentino/.dotfiles"
+#git clone "https://github.com/DanielTolentino/.dotfiles"
 chsh -s /usr/bin/fish
 ln -s "$HOME/.dotfiles/fish" $HOME/.config/
 ln -s "$HOME/.dotfiles/kitty" $HOME/.config/
