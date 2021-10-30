@@ -9,7 +9,7 @@
 ;(package! some-package)
 (package! all-the-icons)
 (package! all-the-icons-dired)
- 
+(package! tmux-pane)
 ;;(package! all-the-icons
   ;;:recipe (:local-repo "/home/tolentino/.emacs.d/.local/straight/build-27.2/all-the-icons"))
 
