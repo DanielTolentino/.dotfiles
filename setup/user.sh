@@ -3,25 +3,21 @@ echo -e "\nINSTALLING AUR SOFTWARE\n"
 
 #git clone "https://github.com/DanielTolentino/.dotfiles"
 chsh -s /usr/bin/fish
-sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+#sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 ln -s "$HOME/.dotfiles/fish" $HOME/.config/
 ln -s "$HOME/.dotfiles/kitty" $HOME/.config/
-rm -r "$HOME/.doom.d"
-ln -s "$HOME/.dotfiles/.doom.d" $HOME/
-doom sync
+#rm -r "$HOME/.doom.d"
+#ln -s "$HOME/.dotfiles/.doom.d" $HOME/
+#doom sync
 
 PKGS=(
 'authy-desktop-win32-bin'
 'auto-cpufreq'
 'awesome-terminal-fonts'
-'brave-bin' # Brave Browser
 'chrome-gnome-shell'
 'dxvk-bin' # DXVK DirectX to Vulcan
 'github-desktop-bin' # Github Desktop sync
-'gnome-shell-extension-pop-shell-git'
 'iriunwebcam-bin'
-'pop-launcher-git'
-'pop-shell-shortcuts-git'
 'rclone-browser'
 'timeshift'
 'ttf-droid'
@@ -29,9 +25,7 @@ PKGS=(
 'ttf-meslo' # Nerdfont package
 'ttf-ms-fonts'
 'ttf-roboto'
-'ulauncher'
 'visual-studio-code-bin'
-'whatsapp-for-linux'
 'zoom' # video conferences
 'zramd'
 )
