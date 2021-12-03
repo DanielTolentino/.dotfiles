@@ -272,4 +272,4 @@ if status is-interactive
 end
 
 ### SETTING THE STARSHIP PROMPT ###
-starship init fish | source
+#starship init fish | source
