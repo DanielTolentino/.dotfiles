@@ -12,6 +12,7 @@
 set -e fish_user_paths
 set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
 set -U fish_user_paths $HOME/.local/share $HOME/Applications $fish_user_paths
+test $TERM != "screen"; and exec tmux
 
 ### EXPORT ###
 set fish_greeting                                 # Supresses fish's intro message
