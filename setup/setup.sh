@@ -24,7 +24,6 @@ PKGS=(
 'gedit'
 'gimp' # Photo editing
 'git'
-'github-cli'
 'gnupg'
 'gnutls'
 'gparted' # partition management
@@ -33,6 +32,7 @@ PKGS=(
 'htop'
 'kitty'
 'make'
+'micro'
 'neofetch'
 'networkmanager'
 'noto-fonts'
@@ -41,9 +41,11 @@ PKGS=(
 #'os-prober'
 'pacman-contrib'
 'patch'
+'pcmanfm'
 'pkgconf'
 'qemu'
 'ranger'
+'rofi'
 'rsync'
 #'steam'
 'telegram-desktop'
