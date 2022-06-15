@@ -10,19 +10,20 @@
 # First line removes the path; second line sets it.  Without the first line,
 # your path gets massive and fish becomes very slow.
 set -e fish_user_paths
+set -U fish_features qmark-noglob
 set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
 set -U fish_user_paths $HOME/.local/share $HOME/Applications $fish_user_paths
 #test $TERM != "screen"; and exec tmux
 
 # Adapted from https://github.com/fish-shell/fish-shell/issues/4434#issuecomment-332626369
 # only run in interactive (not automated SSH for example)
-if status is-interactive
+#if status is-interactive
 # don't nest inside another tmux
-and not set -q TMUX
+#and not set -q TMUX
   # Adapted from https://unix.stackexchange.com/a/176885/347104
   # Create session 'main' or attach to 'main' if already exists.
-  tmux new-session -A -s main
-end
+  #tmux new-session -A -s main
+#end
 
 ### EXPORT ###
 set fish_greeting                                 # Supresses fish's intro message
@@ -275,6 +276,7 @@ alias config="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 # get error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
 
+alias yt="mpv --ytdl-format=mp4"
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
@@ -283,4 +285,4 @@ if status is-interactive
 end
 
 ### SETTING THE STARSHIP PROMPT ###
-#starship init fish | source
+starship init fish | source
