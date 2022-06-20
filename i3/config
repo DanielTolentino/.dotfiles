@@ -50,6 +50,12 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 #bindsym XF86KbdBrightnessUp exec kbdbacklight up
 #indsym XF86KbdBrightnessDown exec kbdbacklight down 
 
+#print
+#interactive screenshot by pressing printscreen
+bindsym Print exec flameshot gui
+#crop-area screenshot by pressing Mod + printscreen
+#bindsym $mod+Print exec flameshot gui
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -202,6 +208,7 @@ exec_always --no-startup-id numlockx on
 exec --no-startup-id nitrogen --restore
 exec_always --no-startup-id "picom --config /home/daniel/.config/picom/picom.conf"
 exec alacritty
+exec_always --no-startup-id xfce4-power-manager
 
 bindsym $mod+g exec "rofi -show window"
 bindsym $mod+q exec "rofi -show run"

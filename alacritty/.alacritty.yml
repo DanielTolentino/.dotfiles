@@ -4,55 +4,49 @@
 # environment variables. Some entries may override variables
 # set by alacritty it self.
 # env:
-  # TERM env customization.
-  #
-  # If this property is not set, alacritty will set it to xterm-256color.
-  #
-  # Note that some xterm terminfo databases don't declare support for italics.
-  # You can verify this by checking for the presence of `smso` and `sitm` in
-  # `infocmp xterm-256color`.
-   #TERM: xterm-256color-italic
-
+# TERM env customization.
+#
+# If this property is not set, alacritty will set it to xterm-256color.
+#
+# Note that some xterm terminfo databases don't declare support for italics.
+# You can verify this by checking for the presence of `smso` and `sitm` in
+# `infocmp xterm-256color`.
+#TERM: xterm-256color-italic
 #window:
-  # Window dimensions (changes require restart)
-  #
-  # Specified in number of columns/lines, not pixels. If both are zero this
-  # setting is ignored.
-  #dimensions:
-  #  columns: 100
-  #  lines: 85
-
-  # Window padding (changes require restart)
-  #
-  # Blank space added around the window in pixels. This padding is not scaled by
-  # DPI and the specified value is always added at both opposing sides.
-  #padding:
- #   x: 0
- #   y: 0
-
-  # Spread additional padding evenly around the terminal content.
-  #dynamic_padding: false
-
-  # Window decorations
-  #
-  # Available values:
-  # - full: borders and title bar
-  # - none: neither borders nor title bar
-  # - transparent: title bar, transparent background and title bar buttons
-  # - buttonless: title bar, transparent background, but no title bar buttons
-  #decorations: full
-
-  # Startup Mode (changes require restart)
-  #
-  # Values for `startup_mode`:
-  #   - Windowed
-  #   - Maximized
-  #   - Fullscreen
-  #
-  # Values for `startup_mode` (macOS only):
-  #   - SimpleFullscreen
-  #startup_mode: Windowed
-
+# Window dimensions (changes require restart)
+#
+# Specified in number of columns/lines, not pixels. If both are zero this
+# setting is ignored.
+#dimensions:
+#  columns: 100
+#  lines: 85
+# Window padding (changes require restart)
+#
+# Blank space added around the window in pixels. This padding is not scaled by
+# DPI and the specified value is always added at both opposing sides.
+#padding:
+#   x: 0
+#   y: 0
+# Spread additional padding evenly around the terminal content.
+#dynamic_padding: false
+# Window decorations
+#
+# Available values:
+# - full: borders and title bar
+# - none: neither borders nor title bar
+# - transparent: title bar, transparent background and title bar buttons
+# - buttonless: title bar, transparent background, but no title bar buttons
+#decorations: full
+# Startup Mode (changes require restart)
+#
+# Values for `startup_mode`:
+#   - Windowed
+#   - Maximized
+#   - Fullscreen
+#
+# Values for `startup_mode` (macOS only):
+#   - SimpleFullscreen
+#startup_mode: Windowed
 scrolling:
   # maximum number of lines in the scrollback buffer. Specifying '0' will
   # disable scrolling.
@@ -131,82 +125,30 @@ custom_cursor_colors: true
 colors:
   # Default colors
   primary:
-    background: '0x2c2b2a'
-    foreground: '0xf9e7c4'
-
-    dim_foreground:    '0x685E4A'
-    bright_foreground: '0x1C1508'
-    dim_background:    '0x202322'
-    bright_background: '0x353433'
-
-  # Cursor colors
-  cursor:
-    text: '0x1d1f21'
-    cursor: '0xffffff'
+    background: '#282a36'
+    foreground: '#f8f8f2'
 
   # Normal colors
   normal:
-    black:   '0x282a2e'
-    blue:    '0x5f819d'
-    cyan:    '0x5e8d87'
-    green:   '0x8c9440'
-    magenta: '0x85678f'
-    orange:  '0xcc6953'
-    red:     '0xa54242'
-    white:   '0x707880'
-    yellow:  '0xde935f'
+    black: '#000000'
+    red: '#ff5555'
+    green: '#50fa7b'
+    yellow: '#f1fa8c'
+    blue: '#caa9fa'
+    magenta: '#ff79c6'
+    cyan: '#8be9fd'
+    white: '#bfbfbf'
 
   # Bright colors
   bright:
-    black:   '0x373b41'
-    blue:    '0x81a2be'
-    cyan:    '0x8abeb7'
-    green:   '0xb5bd68'
-    magenta: '0xb294bb'
-    red:     '0xcc6666'
-    white:   '0xc5c8c6'
-    yellow:  '0xf0c674'
-
-  # # Tomorrow Night (https://github.com/aarowill/base16-alacritty/blob/master/colors/base16-tomorrow-night.yml)
-  # # Default colors
-  # primary:
-  #   background: '0x1d1f21'
-  #   foreground: '0xc5c8c6'
-  # # Colors the cursor will use if `custom_cursor_colors` is true
-  # cursor:
-  #   text: '0x1d1f21'
-  #   cursor: '0xc5c8c6'
-  # # Normal colors
-  # normal:
-  #   black:   '0x1d1f21'
-  #   red:     '0xcc6666'
-  #   green:   '0xb5bd68'
-  #   yellow:  '0xf0c674'
-  #   blue:    '0x81a2be'
-  #   magenta: '0xb294bb'
-  #   cyan:    '0x8abeb7'
-  #   white:   '0xc5c8c6'
-  # # Bright colors
-  # bright:
-  #   black:   '0x969896'
-  #   red:     '0xde935f'
-  #   green:   '0x282a2e'
-  #   yellow:  '0x373b41'
-  #   blue:    '0xb4b7b4'
-  #   magenta: '0xe0e0e0'
-  #   cyan:    '0xa3685a'
-  #   white:   '0xffffff'
-
-  # Indexed Colors
-  #
-  # The indexed colors include all colors from 16 to 256.
-  # When these are not set, they're filled with sensible defaults.
-  #
-  # Example:
-  #   `- { index: 16, color: '0xff00ff' }`
-  #
-  # indexed_colors: []
-
+    black: '#575b70'
+    red: '#ff6e67'
+    green: '#5af78e'
+    yellow: '#f4f99d'
+    blue: '#caa9fa'
+    magenta: '#ff92d0'
+    cyan: '#9aedfe'
+    white: '#e6e6e6'
 # Visual Bell
 #
 # Any time the BEL code is received, Alacritty "rings" the visual bell. Once
@@ -331,71 +273,78 @@ windows.opacity: 1.0
 #   - AppKeypad
 #
 key_bindings:
-  - { key: V,        mods: Command,       action: Paste                        }
-  - { key: C,        mods: Command,       action: Copy                         }
-  - { key: Q,        mods: Command,       action: Quit                         }
-  - { key: N,        mods: Command,       action: SpawnNewInstance             }
-  - { key: Return,   mods: Command,       action: ToggleFullscreen             }
+  - { key: V, mods: Command, action: Paste }
+  - { key: C, mods: Command, action: Copy }
+  - { key: Q, mods: Command, action: Quit }
+  - { key: N, mods: Command, action: SpawnNewInstance }
+  - { key: Return, mods: Command, action: ToggleFullscreen }
 
-  - { key: Home,                          chars: "\x1bOH",   mode: AppCursor   }
-  - { key: Home,                          chars: "\x1b[H",   mode: ~AppCursor  }
-  - { key: End,                           chars: "\x1bOF",   mode: AppCursor   }
-  - { key: End,                           chars: "\x1b[F",   mode: ~AppCursor  }
-  - { key: Equals,   mods: Command,       action: IncreaseFontSize             }
-  - { key: Minus,    mods: Command,       action: DecreaseFontSize             }
-  - { key: Minus,    mods: Command|Shift, action: ResetFontSize                }
-  - { key: PageUp,   mods: Shift,         chars: "\x1b[5;2~"                   }
-  - { key: PageUp,   mods: Control,       chars: "\x1b[5;5~"                   }
-  - { key: PageUp,                        chars: "\x1b[5~"                     }
-  - { key: PageDown, mods: Shift,         chars: "\x1b[6;2~"                   }
-  - { key: PageDown, mods: Control,       chars: "\x1b[6;5~"                   }
-  - { key: PageDown,                      chars: "\x1b[6~"                     }
-  - { key: Left,     mods: Shift,         chars: "\x1b[1;2D"                   }
-  - { key: Left,     mods: Control,       chars: "\x1b[1;5D"                   }
-  - { key: Left,     mods: Alt,           chars: "\x1b[1;3D"                   }
-  - { key: Left,                          chars: "\x1b[D",   mode: ~AppCursor  }
-  - { key: Left,                          chars: "\x1bOD",   mode: AppCursor   }
-  - { key: Right,    mods: Shift,         chars: "\x1b[1;2C"                   }
-  - { key: Right,    mods: Control,       chars: "\x1b[1;5C"                   }
-  - { key: Right,    mods: Alt,           chars: "\x1b[1;3C"                   }
-  - { key: Right,                         chars: "\x1b[C",   mode: ~AppCursor  }
-  - { key: Right,                         chars: "\x1bOC",   mode: AppCursor   }
-  - { key: Up,       mods: Shift,         chars: "\x1b[1;2A"                   }
-  - { key: Up,       mods: Control,       chars: "\x1b[1;5A"                   }
-  - { key: Up,       mods: Alt,           chars: "\x1b[1;3A"                   }
-  - { key: Up,                            chars: "\x1b[A",   mode: ~AppCursor  }
-  - { key: Up,                            chars: "\x1bOA",   mode: AppCursor   }
-  - { key: Down,     mods: Shift,         chars: "\x1b[1;2B"                   }
-  - { key: Down,     mods: Control,       chars: "\x1b[1;5B"                   }
-  - { key: Down,     mods: Alt,           chars: "\x1b[1;3B"                   }
-  - { key: Down,                          chars: "\x1b[B",   mode: ~AppCursor  }
-  - { key: Down,                          chars: "\x1bOB",   mode: AppCursor   }
-  - { key: Tab,      mods: Shift,         chars: "\x1b[Z"                      }
-  - { key: F1,                            chars: "\x1bOP"                      }
-  - { key: F2,                            chars: "\x1bOQ"                      }
-  - { key: F3,                            chars: "\x1bOR"                      }
-  - { key: F4,                            chars: "\x1bOS"                      }
-  - { key: F5,                            chars: "\x1b[15~"                    }
-  - { key: F6,                            chars: "\x1b[17~"                    }
-  - { key: F7,                            chars: "\x1b[18~"                    }
-  - { key: F8,                            chars: "\x1b[19~"                    }
-  - { key: F9,                            chars: "\x1b[20~"                    }
-  - { key: F10,                           chars: "\x1b[21~"                    }
-  - { key: F11,                           chars: "\x1b[23~"                    }
-  - { key: F12,                           chars: "\x1b[24~"                    }
-  - { key: Back,                          chars: "\x7f"                        }
-  - { key: Back,     mods: Alt,           chars: "\x1b\x7f"                    }
-  - { key: Insert,                        chars: "\x1b[2~"                     }
-  - { key: Delete,                        chars: "\x1b[3~"                     }
+  - { key: Home, chars: "\eOH", mode: AppCursor }
+  - { key: Home, chars: "\e[H", mode: ~AppCursor }
+  - { key: End, chars: "\eOF", mode: AppCursor }
+  - { key: End, chars: "\e[F", mode: ~AppCursor }
+  - { key: Equals, mods: Command, action: IncreaseFontSize }
+  - { key: Minus, mods: Command, action: DecreaseFontSize }
+  - { key: Minus, mods: Command|Shift, action: ResetFontSize }
+  - { key: PageUp, mods: Shift, chars: "\e[5;2~" }
+  - { key: PageUp, mods: Control, chars: "\e[5;5~" }
+  - { key: PageUp, chars: "\e[5~" }
+  - { key: PageDown, mods: Shift, chars: "\e[6;2~" }
+  - { key: PageDown, mods: Control, chars: "\e[6;5~" }
+  - { key: PageDown, chars: "\e[6~" }
+  - { key: Left, mods: Shift, chars: "\e[1;2D" }
+  - { key: Left, mods: Control, chars: "\e[1;5D" }
+  - { key: Left, mods: Alt, chars: "\e[1;3D" }
+  - { key: Left, chars: "\e[D", mode: ~AppCursor }
+  - { key: Left, chars: "\eOD", mode: AppCursor }
+  - { key: Right, mods: Shift, chars: "\e[1;2C" }
+  - { key: Right, mods: Control, chars: "\e[1;5C" }
+  - { key: Right, mods: Alt, chars: "\e[1;3C" }
+  - { key: Right, chars: "\e[C", mode: ~AppCursor }
+  - { key: Right, chars: "\eOC", mode: AppCursor }
+  - { key: Up, mods: Shift, chars: "\e[1;2A" }
+  - { key: Up, mods: Control, chars: "\e[1;5A" }
+  - { key: Up, mods: Alt, chars: "\e[1;3A" }
+  - { key: Up, chars: "\e[A", mode: ~AppCursor }
+  - { key: Up, chars: "\eOA", mode: AppCursor }
+  - { key: Down, mods: Shift, chars: "\e[1;2B" }
+  - { key: Down, mods: Control, chars: "\e[1;5B" }
+  - { key: Down, mods: Alt, chars: "\e[1;3B" }
+  - { key: Down, chars: "\e[B", mode: ~AppCursor }
+  - { key: Down, chars: "\eOB", mode: AppCursor }
+  - { key: Tab, mods: Shift, chars: "\e[Z" }
+  - { key: F1, chars: "\eOP" }
+  - { key: F2, chars: "\eOQ" }
+  - { key: F3, chars: "\eOR" }
+  - { key: F4, chars: "\eOS" }
+  - { key: F5, chars: "\e[15~" }
+  - { key: F6, chars: "\e[17~" }
+  - { key: F7, chars: "\e[18~" }
+  - { key: F8, chars: "\e[19~" }
+  - { key: F9, chars: "\e[20~" }
+  - { key: F10, chars: "\e[21~" }
+  - { key: F11, chars: "\e[23~" }
+  - { key: F12, chars: "\e[24~" }
+  - { key: Back, chars: "" }
+  - { key: Back, mods: Alt, chars: "\e" }
+  - { key: Insert, chars: "\e[2~" }
+  - { key: Delete, chars: "\e[3~" }
 
-    # shortcuts for tmux. the leader key is control-b (0x02)
-  - { key: W,        mods: Command,       chars: "\x02&"                       }  # close tab (kill)
-  - { key: T,        mods: Command,       chars: "\x02c"                       }  # new tab
-  - { key: RBracket, mods: Command|Shift, chars: "\x02n"                       }  # select next tab
-  - { key: LBracket, mods: Command|Shift, chars: "\x02p"                       }  # select previous tab
-  - { key: RBracket, mods: Command,       chars: "\x02o"                       }  # select next pane
-  - { key: LBracket, mods: Command,       chars: "\x02;"                       }  # select last (previously used) pane
-  - { key: F,        mods: Command,       chars: "\x02/"                       }  # search (upwards) (see tmux.conf)
+  # shortcuts for tmux. the leader key is control-b (0x02)
+  - { key: W, mods: Command, chars: "\x02&" }
+  # close tab (kill)
+  - { key: T, mods: Command, chars: "\x02c" }
+  # new tab
+  - { key: RBracket, mods: Command|Shift, chars: "\x02n" }
+  # select next tab
+  - { key: LBracket, mods: Command|Shift, chars: "\x02p" }
+  # select previous tab
+  - { key: RBracket, mods: Command, chars: "\x02o" }
+  # select next pane
+  - { key: LBracket, mods: Command, chars: "\x02;" }
+  # select last (previously used) pane
+  - { key: F, mods: Command, chars: "\x02/" }
+  # search (upwards) (see tmux.conf)
 
 mouse:
   # Click settings
@@ -408,25 +357,23 @@ mouse:
 
   # If this is `true`, the cursor is temporarily hidden when typing.
   hide_when_typing: true
-
   # URL launcher
   # url:
-    # This program is executed when clicking on a text which is recognized as a URL.
-    # The URL is always added to the command as the last parameter.
-    #
-    # When set to `None`, URL launching will be disabled completely.
-    #
-    # Default:
-    #   - (macOS) open
-    #   - (Linux) xdg-open
-    #   - (Windows) explorer
-    # launcher:
-    #   program: xdg-open
-    #   args: []
-
-    # These are the modifiers that need to be held down for opening URLs when clicking
-    # on them. The available modifiers are documented in the key binding section.
-    # modifiers: Control|Shift
+  # This program is executed when clicking on a text which is recognized as a URL.
+  # The URL is always added to the command as the last parameter.
+  #
+  # When set to `None`, URL launching will be disabled completely.
+  #
+  # Default:
+  #   - (macOS) open
+  #   - (Linux) xdg-open
+  #   - (Windows) explorer
+  # launcher:
+  #   program: xdg-open
+  #   args: []
+  # These are the modifiers that need to be held down for opening URLs when clicking
+  # on them. The available modifiers are documented in the key binding section.
+  # modifiers: Control|Shift
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
@@ -466,7 +413,6 @@ cursor:
   unfocused_hollow: true
 
 # dynamic_title: false
-
 # Live config reload (changes require restart)
 live_config_reload: true
 
@@ -493,14 +439,14 @@ debug:
 
   # Record all characters and escape sequences as test data.
   ref_test: false
-
-# Shell
-#
-# You can set shell.program to the path of your favorite shell, e.g. /bin/fish.
-# Entries in shell.args are passed unmodified as arguments to the shell.
-#shell:
- # program: /bin/fish
+  # Shell
+  #
+  # You can set shell.program to the path of your favorite shell, e.g. /bin/fish.
+  # Entries in shell.args are passed unmodified as arguments to the shell.
+  #shell:
+  # program: /bin/fish
   #args:
-   # - --command=tmux
+  # - --command=tmux
+theme: Dracula
 
 # vim: nospell

@@ -237,9 +237,11 @@ alias lt='exa -aT --color=always --group-directories-first' # tree listing
 alias l.='exa -a | egrep "^\."'
 
 # pacman and yay
-alias pacs='sudo pacman -S'				 #install standard pkgs
+alias pacy='sudo pacman -S'				 #install standard pkgs
+alias pacs='pacman -Ss'				 #search standard pkgs
 alias pacsyu='sudo pacman -Syyu' 		 # update only standard pkgs
-alias yays='yay -S'                		 #install AUR pkgs
+alias yayy='sudo yay -S'                		 #install AUR pkgs
+alias yays='yay -Ss'                		 #search AUR pkgs
 alias yaysua='yay -Sua --noconfirm'              # update only AUR pkgs (yay)
 alias yaysyu='yay -Syu --noconfirm'              # update standard pkgs and AUR pkgs (yay)
 alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
