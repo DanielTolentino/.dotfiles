@@ -61,6 +61,8 @@ PKGS=(
 'stow'
 'telegram-desktop'
 'terminus-font'
+#'tlp'
+'thermald'
 'tmux'
 'ttf-bitstream-vera'
 'ttf-dejavu'
