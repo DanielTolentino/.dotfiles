@@ -60,7 +60,7 @@ bindsym Print exec flameshot gui
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec xterm
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -206,8 +206,8 @@ bar {
 exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 exec_always --no-startup-id numlockx on
 exec --no-startup-id nitrogen --restore
-exec_always --no-startup-id "picom --config /home/daniel/.config/picom/picom.conf"
-exec alacritty
+#exec_always --no-startup-id "picom --config /home/daniel/.config/picom/picom.conf"
+exec xterm 
 exec_always --no-startup-id xfce4-power-manager
 
 bindsym $mod+g exec "rofi -show window"
@@ -216,5 +216,6 @@ bindsym $mod+q exec "rofi -show run"
 bindsym $mod+i exec "firefox"
 bindsym $mod+p exec "pcmanfm"
 
-
+# Moving workspaces between screens 
+bindsym $mod+o move workspace to output right
 
