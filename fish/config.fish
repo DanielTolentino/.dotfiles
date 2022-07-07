@@ -208,7 +208,7 @@ complete \
 
 
 ### ALIASES ###
-alias clear='/bin/clear; echo; echo; seq 1 (tput cols) | sort -R | spark | lolcat; echo; echo'
+#alias clear='/bin/clear; echo; echo; seq 1 (tput cols) | sort -R | spark | lolcat; echo; echo'
 
 # root privileges
 alias doas="doas --"
@@ -237,10 +237,10 @@ alias lt='exa -aT --color=always --group-directories-first' # tree listing
 alias l.='exa -a | egrep "^\."'
 
 # pacman and yay
-alias pacy='sudo pacman -S'				 #install standard pkgs
+alias pacy='sudo pacman -S'			 #install standard pkgs
 alias pacs='pacman -Ss'				 #search standard pkgs
 alias pacsyu='sudo pacman -Syyu' 		 # update only standard pkgs
-alias yayy='sudo yay -S'                		 #install AUR pkgs
+alias yayy='yay -S'                		 #install AUR pkgs
 alias yays='yay -Ss'                		 #search AUR pkgs
 alias yaysua='yay -Sua --noconfirm'              # update only AUR pkgs (yay)
 alias yaysyu='yay -Syu --noconfirm'              # update standard pkgs and AUR pkgs (yay)
