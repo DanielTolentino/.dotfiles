@@ -280,6 +280,8 @@ alias jctl="journalctl -p 3 -xb"
 
 alias yt="mpv --ytdl-format=mp4"
 
+alias btr="sudo .dotfiles/bt_restart.sh"
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
 
