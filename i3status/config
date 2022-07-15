@@ -31,8 +31,8 @@ wireless _first_ {
 }
 
 ethernet _first_ {
-        format_up = "E: %ip (%speed)"
-        format_down = "E: down"
+        format_up = "🌐 %ip (%speed)"
+        format_down = "🌐 down"
 }
 
 disk "/" {
@@ -42,7 +42,7 @@ disk "/" {
 }
 
 cpu_usage {
-        format= "CPU %usage"
+        format= "⚡ CPU %usage"
         max_threshold= 75
 }
 
@@ -52,14 +52,14 @@ load {
 
 
 memory {
-        format = "%used | %available MEM %percentage_used"
+        format = "🗃️ %used  > %percentage_used 📈 %available MEM"
         threshold_degraded = "1G"
         
 
 }
 
 tztime local {
-        format = " %Y-%m-%d %H:%M:%S"
+        format = " %Y-%m-%d | %H:%M"
 }
 
 
@@ -72,7 +72,7 @@ volume master{
 }
 
 cpu_temperature 0 {
-        format = "%degrees °C"
+        format = "♨️ %degrees °C"
         path = "/sys/class/hwmon/hwmon1/temp1_input"
 }
 
