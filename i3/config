@@ -59,8 +59,16 @@ bindsym Print exec flameshot gui
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+#SCRATCHPAD
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
+#END OF SCRATCHPAD
+
 # start a terminal
-bindsym $mod+Return exec xterm
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -198,16 +206,17 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-	font pango:DejaVu Sans Mono 8
-        separator_symbol ⁞
+	font pango:Font Awesome 6 Free 8
+        separator_symbol |
         status_command i3status
 }
 
 exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id /usr/lib/usr/lib/polkit-1/polkitd
 exec_always --no-startup-id numlockx on
 exec --no-startup-id nitrogen --restore
 #exec_always --no-startup-id "picom --config /home/daniel/.config/picom/picom.conf"
-exec xterm 
+exec kitty 
 exec_always --no-startup-id xfce4-power-manager
 
 bindsym $mod+g exec "rofi -show window"
@@ -218,4 +227,3 @@ bindsym $mod+p exec "pcmanfm"
 
 # Moving workspaces between screens 
 bindsym $mod+o move workspace to output right
-
