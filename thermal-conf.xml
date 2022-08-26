@@ -1,0 +1,39 @@
+<ThermalConfiguration>  
+  <Platform>  
+   <Name>Aspire One</Name>  
+   <ProductName>*</ProductName>  
+   <Preference>QUIET</Preference>  
+   <ThermalSensors>  
+    <ThermalSensor>  
+     <Type>CPU_TEMP</Type>  
+     <Path>/sys/class/hwmon/hwmon4/temp1_input</Path>  
+     <AsyncCapable>0</AsyncCapable>  
+    </ThermalSensor>  
+   </ThermalSensors>  
+   <ThermalZones>  
+    <ThermalZone>  
+     <Type>cpu package</Type>  
+      <TripPoints>  
+       <TripPoint>  
+        <SensorType>CPU_TEMP</SensorType>  
+         <Temperature>70000</Temperature>  
+         <type>passive</type>  
+         <ControlType>PARALLEL</ControlType>  
+         <CoolingDevice>  
+          <index>1</index>  
+          <type>cpufreq</type>  
+          <influence>60</influence>  
+          <SamplingPeriod>1</SamplingPeriod>  
+         </CoolingDevice>  
+         <CoolingDevice>  
+          <index>2</index>  
+          <type>Processor</type>  
+          <influence>40</influence>  
+          <SamplingPeriod>1</SamplingPeriod>  
+         </CoolingDevice>  
+        </TripPoint>  
+       </TripPoints>  
+      </ThermalZone>  
+    </ThermalZones>  
+  </Platform>  
+ </ThermalConfiguration>
