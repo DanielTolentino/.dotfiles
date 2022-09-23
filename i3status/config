@@ -18,15 +18,27 @@ order += "volume master"
 order += "ethernet _first_"
 order += "wireless _first_"
 order += "disk /"
-order += "load"
-order += "cpu_temperature 0"
-order += "cpu_usage"
-order += "memory"
+#order += "load"
+#order += "cpu_temperature 0"
+#order += "cpu_usage"
+order += "battery 0"
+#order += "memory"
 order += "tztime local"
 
-
+# ... more stuff ...
+battery 0 {
+	 integer_battery_capacity=True
+	 format = "%status %percentage %remaining"
+	 last_full_capacity = true
+	 format_down = "No battery"
+	 status_chr ="⚡CHR"
+	 status_full="FULL"
+	 status_bat="🔋 BAT"
+	 status_unk = "? UNK"
+	 low_threshold = 10
+}
 wireless _first_ {
-	format_up = "  %quality » %essid "
+	format_up = "📶%quality » %essid"
 	format_down = ""
 }
 
@@ -36,7 +48,7 @@ ethernet _first_ {
 }
 
 disk "/" {
-        format = " HDD %percentage_used %avail"
+        format = "💾 SDD %percentage_used %avail"
         prefix_type = custom
         low_threshold = 20
 }
@@ -47,24 +59,24 @@ cpu_usage {
 }
 
 load {
-        format = " Load %1min"
+        format = "🚀 Load %1min"
 }
 
 
 memory {
         format = "🗃️ %used  > %percentage_used 📈 %available MEM"
         threshold_degraded = "1G"
-        
+
 
 }
 
 tztime local {
-        format = " %Y-%m-%d | %H:%M"
+        format = "%Y-%m-%d | %H:%M"
 }
 
 
 volume master{
-        format = ": %volume"
+        format = "🔊: %volume"
         format_muted = "🔇 muted (%volume)"
         device = "default"
         mixer = "Master"
@@ -75,5 +87,3 @@ cpu_temperature 0 {
         format = "♨️ %degrees °C"
         path = "/sys/class/hwmon/hwmon1/temp1_input"
 }
-
-
