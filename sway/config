@@ -41,7 +41,7 @@ exec --no-startup-id nm-applet
 #set $menu dmenu_path | dmenu | xargs swaymsg exec --
 set $menu "XDG_DATA_DIRS=/home/daniel/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share rofi -drun-reload-desktop-cache -show-icons -modi drun,run -show drun | xargs swaymsg exec --
 
-bindsym $mod+g exec ./selector.sh
+bindsym $mod+g exec ~/.config/sway/selector.sh
 
 ### Output configuration
 #
