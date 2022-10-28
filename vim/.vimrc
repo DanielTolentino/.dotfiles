@@ -8,6 +8,8 @@ syntax on
 
 " enable line numbers "
 set number
+" enable relative line numbers "
+set relativenumber  
 
 " highlight current line "
 set cursorline
