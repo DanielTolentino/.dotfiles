@@ -3,7 +3,9 @@
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty it self.
-# env:
+#env:
+env:
+  TERM: xterm-256color
 # TERM env customization.
 #
 # If this property is not set, alacritty will set it to xterm-256color.
@@ -12,7 +14,7 @@
 # You can verify this by checking for the presence of `smso` and `sitm` in
 # `infocmp xterm-256color`.
 #TERM: xterm-256color-italic
-#window:
+#indow:
 # Window dimensions (changes require restart)
 #
 # Specified in number of columns/lines, not pixels. If both are zero this
@@ -61,25 +63,28 @@ font:
   # The normal (roman) font face to use.
   # Style can be specified to pick a specific face.
   normal:
-    #family: Iosevka
+    family: Iosevka
     style: Light
-    family: "Fira Code"
+    #family: Hack
+    #family: "Fira Code"
     # family: "Source Code Pro"
     # style: Retina
 
   # The bold font face
   bold:
-    #family: Iosevka
-    #style: Medium
-    family: "Fira Code"
+    family: Iosevka
+    style: Medium
+    #family: Hack
+    #family: "Fira Code"
     # family: "Source Code Pro"
 
   # The italic font face
   italic:
-    #family: Iosevka
+    family: Iosevka
     style: "Light Italic"
+    #family: Hack
     # style: "Light Oblique"
-    family: "Fira Code"
+    #family: "Fira Code"
     # family: "Source Code Pro"
     # style: "Medium Italic"
 
@@ -98,7 +103,6 @@ font:
   glyph_offset:
     x: 0
     y: 0
-
   # Thin stroke font rendering (macOS only)
   #
   # Thin strokes are suitable for retina displays, but for non-retina you
@@ -113,8 +117,8 @@ font:
   #
   # This is a global setting and will require a log out or restart to take
   # effect.
-  use_thin_strokes: true
-
+  #use_thin_strokes: true
+  #AppleFontSmoothing: default
 # When true, bold text is drawn using the bright variant of colors.
 draw_bold_text_with_bright_colors: false
 
@@ -125,30 +129,30 @@ custom_cursor_colors: true
 colors:
   # Default colors
   primary:
-    background: '#282a36'
-    foreground: '#f8f8f2'
+    background: '0xe8e9ec'
+    foreground: '0x33374c'
 
   # Normal colors
   normal:
-    black: '#000000'
-    red: '#ff5555'
-    green: '#50fa7b'
-    yellow: '#f1fa8c'
-    blue: '#caa9fa'
-    magenta: '#ff79c6'
-    cyan: '#8be9fd'
-    white: '#bfbfbf'
+    black: '0xdcdfe7'
+    red: '0xcc517a'
+    green: '0x668e3d'
+    yellow: '0xc57339'
+    blue: '0x2d539e'
+    magenta: '0x7759b4'
+    cyan: '0x3f83a6'
+    white: '0x33374c'
 
   # Bright colors
   bright:
-    black: '#575b70'
-    red: '#ff6e67'
-    green: '#5af78e'
-    yellow: '#f4f99d'
-    blue: '#caa9fa'
-    magenta: '#ff92d0'
-    cyan: '#9aedfe'
-    white: '#e6e6e6'
+    black: '0x8389a3'
+    red: '0xcc3768'
+    green: '0x598030'
+    yellow: '0xb6662d'
+    blue: '0x22478e'
+    magenta: '0x6845ad'
+    cyan: '0x327698'
+    white: '0x262a3f'
 # Visual Bell
 #
 # Any time the BEL code is received, Alacritty "rings" the visual bell. Once
@@ -447,6 +451,6 @@ debug:
   # program: /bin/fish
   #args:
   # - --command=tmux
-theme: Dracula
+theme: Iceberg-Light
 
 # vim: nospell
