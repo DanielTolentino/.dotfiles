@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+
+
+swaymsg -t get_tree | jq -r '.nodes[].nodes[] | if .nodes then [recurse(.nodes[])] else [] end + .floating_nodes | .[] | select(.nodes==[]) | ((.id | tostring) + "" + .name)' |
+wofi --show dmenu | {
+read -r id name
+swaymsg "[con_id=$id]" focus 
+}
+
+# Local Variables:
+# mode: shell-script
+# time-stamp-pattern: "4/TIME_STAMP=\"%:y%02m%02d.%02H%02M%02S\""
+# eval: (add-hook 'before-save-hook 'time-stamp)
+# End:
