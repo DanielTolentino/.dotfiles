@@ -1,5 +1,9 @@
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="$PATH:$HOME/.rvm/bin"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -72,14 +76,18 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git
 		zsh-autosuggestions
-		zsh-syntax-highlighting		
+		zsh-syntax-highlighting	
+		rvm	
 )
 
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+  
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
+export MANPATH="/usr/local/man:$MANPATH"
+export PATH="$PATH:$HOME/.rvm/bin"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -103,5 +111,10 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="micro ~/.zshrc"
 alias ohmyzsh="micro ~/.oh-my-zsh"
 alias yt='noglob mpv --ytdl-format=mp4'
+alias ..='cd ..'
+alias ...='cd ...'
 
-eval "$(starship init zsh)"
+#eval "$(starship init zsh)"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+#export PATH="$PATH:$HOME/.rvm/bin"
