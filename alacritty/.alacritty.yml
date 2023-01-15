@@ -447,10 +447,13 @@ debug:
   #
   # You can set shell.program to the path of your favorite shell, e.g. /bin/fish.
   # Entries in shell.args are passed unmodified as arguments to the shell.
-  #shell:
-  # program: /bin/fish
-  #args:
-  # - --command=tmux
+#Initialize zsh and tmux, attatch to a session if already exisists, create one otherwise.
+shell:
+  program: /bin/zsh
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux"
 theme: Iceberg-Light
 
 # vim: nospell
