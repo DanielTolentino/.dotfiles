@@ -78,6 +78,11 @@ ZSH_THEME="fletcherm" # set by `omz`
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
+# -Docker Completion for Zsh (Official)
+#	mkdir -p ~/.oh-my-zsh/plugins/docker/
+#	curl -fLo ~/.oh-my-zsh/plugins/docker/_docker https://raw.githubusercontent.com/docker/cli/master/contrib/completion/zsh/_docker
+#	Add docker to plugins section in ~/.zshrc
 plugins=(git
 		#git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 		zsh-autosuggestions
